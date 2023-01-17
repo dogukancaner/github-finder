@@ -13,15 +13,19 @@ const Search = ({ loadUser }: SearchProps) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4">
-      <div className="flex gap-2">
+    <div className="flex flex-col gap-4">
+      <div className="flex justify-center items-center gap-2">
         <input
+          className="border w-96 border-gray-600 rounded-md p-3"
           type="text"
           placeholder="Kullanıcı Adı Gir"
           onChange={(e) => setUserName(e.target.value)}
           onKeyDown={handleKeyDown}
         />
-        <button onClick={() => loadUser(userName)}>
+        <button
+          className="border p-3 border-gray-500 rounded-full"
+          onClick={() => loadUser(userName)}
+        >
           <BsSearch size={22} />
         </button>
       </div>

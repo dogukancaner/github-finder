@@ -30,7 +30,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="border p-4 border-gray-600 rounded-2xl bg-indigo-100">
       <Search loadUser={loadUser} />
       {user && <User {...user} />}
       {error && <Error />}
