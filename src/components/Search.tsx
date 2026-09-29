@@ -18,11 +18,14 @@ const Search = ({ loadUser }: SearchProps) => {
         <input
           className="border w-96 border-gray-600 rounded-md p-3"
           type="text"
+          aria-label="GitHub kullanıcı adı"
           placeholder="Kullanıcı Adı Gir"
           onChange={(e) => setUserName(e.target.value)}
           onKeyDown={handleKeyDown}
         />
         <button
+          type="button"
+          aria-label="GitHub kullanıcısını ara"
           className="border p-3 border-gray-500 rounded-full"
           onClick={() => loadUser(userName)}
         >
